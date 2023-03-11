@@ -58,9 +58,29 @@ def zen():
     return quote
 
 def calculate_distance(rA, rB):
-    d=(rA-rB)
-    dist=np.linalg.norm(d)
-    return dist
+    """Calculate the distance between two points.
+
+    Parameters
+    ----------
+    rA, rB : np.ndarray
+        The coordinates of each point.
+
+    Returns
+    -------
+    distance : float
+        The distance between the two points.
+    
+    Examples
+    --------
+    >>> r1 = np.array([0, 0, 0])
+    >>> r2 = np.array([0, 0.1, 0])
+    >>> calculate_distance(r1, r2)
+    0.1
+    """
+    dist_vec = (rA - rB)
+    distance = np.linalg.norm(dist_vec)
+        
+    return distance
 
 def open_pdb(file_location):
     
