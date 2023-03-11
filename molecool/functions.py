@@ -1,28 +1,21 @@
-"""
-functions.py
-A Python package for analyzing and visualizing xyz files. For MolSSI Workshop Python Package development workshop.
-
-Handles the primary functions
-"""
-import this
+"""Provide the primary functions."""
 import os
-import numpy as np
 
 def canvas(with_attribution=True):
     """
-    Placeholder function to show example docstring (NumPy format)
+    Placeholder function to show example docstring (NumPy format).
 
-    Replace this function and doc string for your own project
+    Replace this function and doc string for your own project.
 
     Parameters
     ----------
     with_attribution : bool, Optional, default: True
-        Set whether or not to display who the quote is from
+        Set whether or not to display who the quote is from.
 
     Returns
     -------
     quote : str
-        Compiled string including quote and optional attribution
+        Compiled string including quote and optional attribution.
     """
 
     quote = "The code is but a canvas to our imagination."
@@ -30,7 +23,9 @@ def canvas(with_attribution=True):
         quote += "\n\t- Adapted from Henry David Thoreau"
     return quote
 
-def zen():
+
+
+def zen(with_attribution=True):
     quote = """Beautiful is better than ugly.
     Explicit is better than implicit.
     Simple is better than complex.
@@ -50,7 +45,10 @@ def zen():
     If the implementation is hard to explain, it's a bad idea.
     If the implementation is easy to explain, it may be a good idea.
     Namespaces are one honking great idea -- let's do more of those!"""
-    
+
+    if with_attribution:
+      quote += "\n\tTim Peters"
+
     return quote
 
 def open_pdb(f_loc):
