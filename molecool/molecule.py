@@ -2,21 +2,21 @@
 Functions for molecule analysis
 """
 
-from .measure import calculate_distance
-from .atom_data import atomic_weights
-
-
 def build_bond_list(coordinates, max_bond=1.5, min_bond=0):
-   """
+    """
     Build a list of bonds in a set of coordinates based on a distance criteria.
+
     Parameters
     ----------
     coordinates: np.ndarray
         The coordinates of the atoms to analyze in an (natoms, ndim) array.
+
     max_bond: float, optional
         The maximum distance for two atoms to be considered bonded.
+
     min_bond: float, optional
         The minimum distance for two atoms to be considered bonded.
+
     Returns
     -------
     bonds: dict
@@ -34,23 +34,3 @@ def build_bond_list(coordinates, max_bond=1.5, min_bond=0):
                 bonds[(atom1, atom2)] = distance
 
     return bonds
-
-
-def calculate_molecular_mass(symbols):
-    """Calculate the mass of a molecule.
-    
-    Parameters
-    ----------
-    symbols : list
-        A list of elements.
-    
-    Returns
-    -------
-    mass : float
-        The mass of the molecule
-    """
-    mass = 0
-    for atom in symbols:
-        mass += atomic_weights[atom]
-
-    return mass
