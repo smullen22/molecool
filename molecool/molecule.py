@@ -1,3 +1,4 @@
+from .measure import calculate_distance
 """
 Functions for molecule analysis
 """
