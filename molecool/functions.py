@@ -4,7 +4,7 @@ A Python package for analyzing and visualizing xyz files. For MolSSI Workshop Py
 
 Handles the primary functions
 """
-
+import this
 import os
 import numpy as np
 
